@@ -20,23 +20,18 @@ function receiveCommand(rl) {
         var inputs = args.split("|");
         switch (inputs[0].toLowerCase()) {
             case "add":
-                console.log("add task");
                 await handler.addTask(inputs);
                 break;
             case "show":
-                console.log("show task");
                 await handler.showTasks();
                 break;
             case "finish":
-                console.log("finish task");
                 await handler.finishTask(inputs);
                 break;
             case "delete":
-                console.log("delete task");
                 await handler.deleteTask(inputs);
                 break;
             case "sync":
-                console.log("sync task");
                 await handler.syncTask();
                 break;
             case "close":

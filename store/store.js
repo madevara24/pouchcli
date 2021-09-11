@@ -3,10 +3,9 @@ const pouchUrl = "127.0.0.1:5984";
 const username = "admin";
 const password = "admin";
 const dbName = "tasks";
-const remoteCouch = 'http://' + username + ':' + password + '@' + pouchUrl + '//' + dbName; //change this according to your pouchdb
+const remoteCouch = 'http://' + username + ':' + password + '@' + pouchUrl + '//' + dbName;
 
 const open = () => {
-    console.log(remoteCouch)
     const db = new PouchDB(dbName);
 
     return db;
@@ -32,7 +31,6 @@ const findDocs = async (params, limit=4175) => {
 }
 
 const addDocs = async(params) => {
-    console.log(params)
     const db = open();
     try {
         var result = await db.put(params);

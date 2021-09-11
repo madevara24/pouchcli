@@ -34,12 +34,12 @@ const showTasks = async() => {
     }else{
         console.log("All rows have been retreived\n");
         rows.forEach(e => {
-            console.log("Task: ", e.doc.content);
-            console.log("ID: ", e.doc._id);
-            console.log("Finished: ", e.doc.finished);
-            console.log("Created at: ", e.doc.created_date);
-            console.log("Tags: ", e.doc.tags.toString());
-            console.log("\n");
+            console.log("Task       : ", e.doc.content);
+            console.log("ID         : ", e.doc._id);
+            console.log("Finished   : ", e.doc.finished);
+            console.log("Created at : ", e.doc.created_date);
+            console.log("Tags       : ", e.doc.tags.toString());
+            console.log("\n")
         });
     }
 }
